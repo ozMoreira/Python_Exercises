@@ -1,0 +1,8 @@
+print("\n---------------------------------------------------------------------------------------------\nSeja bem vindo ao sistema de calculo de idade, desenvolvido como exercício da Disciplina de\nComputational Thinking do Curso de Analise e Desenvolvimento de Sistemas da FIAP turma 2021!\n--------------------------------------------------------------------------------------------- ")
+nome = input("\nPara começarmos, por gentileza, nos informe qual o seu Primeiro Nome! >>> ")
+print("\nMuito obrigado ", nome, " ...agora daremos continuidade...")
+nascimento = input("\nPor gentileza, informe agora seu ano de nascimento! >>> ")
+anoAtual = input("\nAgora, digite o Ano Atual, para que seja processado sua idade automaticamente >>> ")
+print("\n---------------------------------------------------------------------------------------------")
+idade = int(anoAtual) - int(nascimento)
+print("\n", nome, "... voce tem (ou terá) ", idade, "anos até o final do ano de ", anoAtual)
