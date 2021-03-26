@@ -1,0 +1,7 @@
+Nome->Oswaldo Moreira
+Idade->35
+Curso->MBA em Projeto e Gestão Aeroportuária
+Ocupação->Comandante de Aeronaves (King Air C90, Baron G58 e Piper Seneca)
+Escolha->É uma área mais estavel que a minha atual, e caso eu pretenta seguir como freelance na area de TI, consigo tocar em Paralelo com a Aviação.
+Desejo->Desenvolvimento e IA.
+Hobbies->Motoclubismo, Leitura, Musica e Viagem
