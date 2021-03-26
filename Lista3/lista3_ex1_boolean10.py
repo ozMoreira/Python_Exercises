@@ -4,8 +4,8 @@ print("\n-----------------------------------------------------------------------
 print("    Exemplo de condições booleanas, desenvolvido como exercício da Disciplina de")
 print("Computational Thinking do Curso de Analise e Desenvolvimento de Sistemas da FIAP turma 2021!")
 
-entradaMenu = 1000
-while entradaMenu != 0:
+entradaMenu = "1000";
+while entradaMenu != "0":
     print("\n---------------------------------------------------------------------------------------------")
     print("\nDigite uma das opções do menu abaixo para acessar o exercicio:")
     print("1 - Número maior que 10?")
@@ -22,12 +22,12 @@ while entradaMenu != 0:
     print("12 - Valida DATA (Ano não bissexto)")
     print("13 - Valida DATA (Ano bissexto)")
     print("0 - SAIR")
-    entradaMenu = int(input("\nDigite sua opção de menu aqui >>> "))
+    entradaMenu = input("\nDigite sua opção de menu aqui >>> ")
 
     #1 - Número maior que 10?
-    if (entradaMenu == 1):
+    if (entradaMenu == "1"):
         print("\n---------------------------------------------------------------------------------------------")
-        entrada = int(input("\nInforme um número qualquer para compararmos com 10: >>>> "))    
+        entrada = input("\nInforme um número qualquer para compararmos com 10: >>>> ")    
         if (entrada == 10):
             print("O número informado é exatamente 10")
         elif(entrada > 10):
@@ -36,7 +36,7 @@ while entradaMenu != 0:
             print("O número", entrada, "é MENOR que 10")
 
     #2 - Compara números
-    elif (entradaMenu == 2):
+    elif (entradaMenu == "2"):
         print("\n---------------------------------------------------------------------------------------------")
         entrada = int(input("\nInforme um número qualquer inteiro: >>>> "))
         num1 = entrada
@@ -51,7 +51,7 @@ while entradaMenu != 0:
             print("O segundo número informado >>>", num2,"<<< é Maior que o primeiro número >>>", num1,"<<<")
     
     #3 - Placar de Jogo
-    elif (entradaMenu ==3):
+    elif (entradaMenu =="3"):
         print("\n---------------------------------------------------------------------------------------------")
         print("\nVamos comparar o placar de dois times de futebol!")
         entrada = input("Informe o nome do primeiro time >>> ")
@@ -74,7 +74,7 @@ while entradaMenu != 0:
             print("Xiiii, pelo visto a partida não teve um vencedor! Apenas um EMPATE!!!")
     
     #4 - Calculo de Hora Extra
-    elif (entradaMenu == 4):
+    elif (entradaMenu == "4"):
         print("\n---------------------------------------------------------------------------------------------")
         print("\nVamos calcular as horas extras de um colaborador ao final da jornada mensal!")
         entrada = input("Informe a jornada diária (em horas) a ser cumprida (HH:mm) >>> ")
@@ -103,7 +103,7 @@ while entradaMenu != 0:
             print("\n\nColaborador te {:.2f}" .format(horaExtra), "horas extras pra receber, no valor de R$ {:.2f}" .format(valorTotalHE)," e seu salário\nneste mês será de  R$ {:.2f}".format(salarioExtra))
     
     #5 - 'A' é divisível por 'B'?
-    elif (entradaMenu == 5):
+    elif (entradaMenu == "5"):
         print("\n---------------------------------------------------------------------------------------------")
         print("\nVamos calcular agora a divisibilidade de dois números, ou seja, se seu resto é '0'")
         entrada = int(input("\nInforme o primeiro número inteiro qualquer >>> "))
@@ -118,7 +118,7 @@ while entradaMenu != 0:
             print("\n\n",numA,"NÃO é divisível por", numB,"pois seu resto é", resultado)
     
     #6 - Calculo de Raiz Quadrada
-    elif (entradaMenu ==6 ):
+    elif (entradaMenu == "6"):
         print("\n---------------------------------------------------------------------------------------------")
         print("\nCalcularemos agora a RAIZ QUADRADA de um número, lembre-se que se vc digitar um número negativo\no sistema solicitará um número positivo válido para o calculo:")
         entrada = float(input("\nInforme um número que deseja saber sua Raiz Quadrada >>> "))
@@ -133,7 +133,7 @@ while entradaMenu != 0:
             print("\nA Raiz Quadrada de",numA, "é {:.1f}".format(resultado))
     
     #7 - Categoria de Idade
-    elif (entradaMenu == 7):
+    elif (entradaMenu == "7"):
         print("\n---------------------------------------------------------------------------------------------")
         entrada = float(input("\nInforme sua idade para calcularmos o seu nivel de senioridade na Natação: >>> "))
         idade = entrada
@@ -152,7 +152,7 @@ while entradaMenu != 0:
             print("\nSua categoria é >>> Senior <<<")
 
     #8 - Calculadora
-    elif (entradaMenu == 8):
+    elif (entradaMenu == "8"):
         print("\n---------------------------------------------------------------------------------------------")
         entrada = float(input("\nInforme o primeiro numero que deseja utilizar no calculo: >>> "))
         numA = entrada
@@ -180,7 +180,7 @@ while entradaMenu != 0:
             print("\nVoce digitou uma opção de Operação Aritmética inválida")
 
     #9 - Equação do 2º Grau
-    elif (entradaMenu == 9):
+    elif (entradaMenu == "9"):
         print("\n---------------------------------------------------------------------------------------------")
         print("\nUma equação é uma igualdade com uma ou mais incógnitas. Vamos calcular o valor de \u0394 e\nsuas raizes reais")
         entrada = int(input("\nInforme um valor inteiro não nulo para a incognita 'a' >>> "))
@@ -209,7 +209,7 @@ while entradaMenu != 0:
             print("A Raiz de x' é >>> {:.2f}".format(raiz1),"e a raiz de x'' é {:.2f}>>> ".format(raiz2))
    
     #10 - Variação de Preço x Tipo de Pagamento
-    elif (entradaMenu == 10):   
+    elif (entradaMenu == "10"):   
         print("\n---------------------------------------------------------------------------------------------")
         print("\nVamos agora simular a alteração de um preço de etiqueta, de acordo com a forma de pagamento!")
         entrada = float(input("\nInforme o valor de um produto, conforme 'consta' na etiqueta >>> R$ "))
@@ -250,7 +250,7 @@ while entradaMenu != 0:
             print("\nPara pagamento Parcelado em 4x, o valor do produto será >>>  R${:.2f} ".format(precoJuros)," <<<\ne o valor de cada parcela será de  >>>  R${:.2f} ".format(precoAplicado)," <<<")              
     
     #11 - Média Disciplina 'C.T.'
-    elif(entradaMenu == 11):
+    elif(entradaMenu == "11"):
         print("\n---------------------------------------------------------------------------------------------")
         print("\nCalculo de Média e Verificação de Aprovaão ou Reprovação Semestral!")
         print("Disciplina de Computational Thinking - FIAP 2021!")
@@ -282,7 +282,7 @@ while entradaMenu != 0:
             print("\n\nO aluno", aluno,"está REPROVADO por falta, pois compareceu apenas a {:.2f}" .format(presencaValidada),"% do total de", aulasProf, "aulas, independente de sua Média Final que foi {:.2f}".format(mediaFinal))
     
     #12 - Valida DATA (Ano não bissexto)
-    elif(entradaMenu == 12):
+    elif(entradaMenu == "12"):
         print("\n---------------------------------------------------------------------------------------------")
         print("\nValidação de uma data qualquer (DD e MM) de um ano não bissexto")
         entrada = int(input("\n Informe um dia qualquer (DD) >>> "))
@@ -318,7 +318,7 @@ while entradaMenu != 0:
             print("\n::::ATENÇÃO:::: A data informada não é válida")
 
     #13 - Valida DATA (Ano bissexto)
-    elif(entradaMenu == 13):
+    elif(entradaMenu == "13"):
         print("\n---------------------------------------------------------------------------------------------")
         print("\nValidação de ano bissexto para prosseguir se uma data é correta")
         entrada = int(input("\n Informe um dia qualquer (DD) >>> "))
@@ -448,5 +448,5 @@ while entradaMenu != 0:
                 print("\n::::ATENÇÃO:::: A data informada não é válida")
     else:
         print("\n---------------------------------------------------------------------------------------------")
-        print("n::::::::::::::::::::::::::::::::::::ATENÇÃO::::::::::::::::::::::::::::::::::::\n      Opção Escolhida Inválida! Selecione uma das opções no Menu abaixo!")
+        print("::::::::::::::::::::::::::::::::::::ATENÇÃO::::::::::::::::::::::::::::::::::::\n      Opção Escolhida Inválida! Selecione uma das opções no Menu abaixo!")
 print("---------------------------------------------------------------------------------------------")
