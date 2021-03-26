@@ -1,7 +1,0 @@
-print("\n---------------------------------------------------------------------------------------------\nSeja bem vindo ao sistema de calculo de Potencia, desenvolvido como exercício da Disciplina de\nComputational Thinking do Curso de Analise e Desenvolvimento de Sistemas da FIAP turma 2021!\n--------------------------------------------------------------------------------------------- ")
-x = input("\nInforme um número inteiro para X = >>> ")
-y = input("Informe agora um outro número para y = >>> ")
-print("\n... calculando...")
-potencia = int(x)**int(y)
-print("\nA resultado de", x, "elevado a", y, "é >>>", potencia, "<<<")
-print("\n---------------------------------------------------------------------------------------------")
