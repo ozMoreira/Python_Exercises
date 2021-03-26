@@ -216,15 +216,15 @@ while entradaMenu != "0":
         precoLabel = entrada
         print("\nInforme agora a forma de pagamento, de acordo com as opções abaixo!")
         print("\n-------------------------------------------------------------------------")
-        print("|              Cheque à Vista - 10% off- (Digite 'C')                   |")
-        print("|         Cartão de Credito à Vista - 5% off - (Digite 'CC')            |")                   
-        print("|             Parcelado em 2 sem juros - (Digite 'P2')                  |")
-        print("|     Parcelado 4 vezes - Juros de 7% no valor total - (Digite 'P4')    |")
+        print("|              Cheque à Vista - 10% off- (Digite '1')                   |")
+        print("|         Cartão de Credito à Vista - 5% off - (Digite '2')            |")                   
+        print("|             Parcelado em 2 sem juros - (Digite '3')                  |")
+        print("|     Parcelado 4 vezes - Juros de 7% no valor total - (Digite '4')    |")
         print("-------------------------------------------------------------------------")
-        entrada = input("\nInforme a opção de pagamento desejada >>> ").upper()
+        entrada = int(input("\nInforme a opção de pagamento desejada >>> "))
         tp_pagamento = entrada
    
-        while (tp_pagamento != "C" and tp_pagamento != "CC" and tp_pagamento != "P2" and tp_pagamento != "P4"):
+        while (tp_pagamento != 1 and tp_pagamento != 2 and tp_pagamento != 3 and tp_pagamento != 4):
             print("\nATENÇÃO!!!!!!!!! Método de pagamento INVALIDO!")
             print("\n-------------------------------------------------------------------------")
             print("|              Cheque à Vista - 10% off- (Digite 'C')                   |")
@@ -232,19 +232,19 @@ while entradaMenu != "0":
             print("|             Parcelado em 2 sem juros - (Digite 'P2')                  |")
             print("|     Parcelado 4 vezes - Juros de 7% no valor total - (Digite 'P4')    |")
             print("-------------------------------------------------------------------------")
-            entrada = input("\nInforme a opção de pagamento desejada para o produto informado >>>> ").upper()
+            entrada = int(input("\nInforme a opção de pagamento desejada para o produto informado >>>> "))
             tp_pagamento = entrada
 
-        if (tp_pagamento == "C"):
+        if (tp_pagamento == 1):
             precoAplicado = precoLabel - ((precoLabel * 10) / 100)
             print("\nPara pagamento no Cheque a Vista, o valor do produto será >>>  R${:.2f} ".format(precoAplicado)," <<<")
-        elif (tp_pagamento == "CC"):
+        elif (tp_pagamento == 2):
             precoAplicado = precoLabel - ((precoLabel * 5) / 100)
             print("\nPara pagamento no Cartão de Crédito a Vista, o valor do produto será >>>  R${:.2f} ".format(precoAplicado)," <<<")
-        elif (tp_pagamento == "P2"):
+        elif (tp_pagamento == 3):
             precoAplicado = precoLabel/2
             print("\nPara pagamento Parcelado em 2x, o valor do produto continua sendo >>>  R${:.2f} ".format(precoLabel)," <<<\ne o valor de cada parcela será de  >>>  R${:.2f} ".format(precoAplicado)," <<<")
-        elif (tp_pagamento == "P4"):
+        elif (tp_pagamento == 4):
             precoJuros = precoLabel + ((precoLabel * 7) / 100)
             precoAplicado = precoJuros/2
             print("\nPara pagamento Parcelado em 4x, o valor do produto será >>>  R${:.2f} ".format(precoJuros)," <<<\ne o valor de cada parcela será de  >>>  R${:.2f} ".format(precoAplicado)," <<<")              
