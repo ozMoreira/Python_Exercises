@@ -1,7 +1,0 @@
-print(" ")
-base = input("Informe o valor da base do triangulo:__")
-alt = input("Informe a altura do triangulo:__")
-area = ((float(base) * float(alt))/2)
-print(" ")
-print("A altura do seu triangulo é", alt, " a base é", base)
-print("A área do triângulo é", area)
