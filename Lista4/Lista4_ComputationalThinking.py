@@ -270,7 +270,7 @@ while entradaMenu != "0":
             resto = num % divisor
             divisor = divisor +1
             if resto == 0:
-                contDivisores +=1
+                contDivisores += 1
         if contDivisores > 2:
             print("\nO número", num, "não e primo, pois possui um total de ", contDivisores,"80divisores")
         else:
@@ -434,7 +434,7 @@ while entradaMenu != "0":
             voltaMenu = input("                Digite '1' para retornar ao menu Principal >>> ")
         print("Obrigado pela sua visita a esta funcionalidade")  
 #Ex. 14 Lista 4 - Numeros Perfeitos
-#   Sua tarefa será a de escrever um algoritmo em Python que, dado um inteiro positivo n,
+#   Sua tarefa será a de escrever um algoritmo em Python que, dado um inteiro positivo n, verifica se ele e perfeito
     if entradaMenu == "14":
         print("\n---------------------------------------------------------------------------------------------"
         +"\nEx. 14 - Lista 4 - Numeros Perfeitos"
@@ -573,7 +573,7 @@ while entradaMenu != "0":
             print("::::::::::::::::::::::::::::::::::::ATENÇÃO::::::::::::::::::::::::::::::::::::")
             voltaMenu = input("                Digite '1' para retornar ao menu Principal >>> ")
         print("Obrigado pela sua visita a esta funcionalidade")  
-        17
+        
     else:
         print("\n---------------------------------------------------------------------------------------------")
         print("::::::::::::::::::::::::::::::::::::ATENÇÃO::::::::::::::::::::::::::::::::::::"+
