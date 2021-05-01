@@ -9,6 +9,8 @@ while entradaMenu != "0":
         +"\n3 - Numeros Perfeitos de 1 a 50k"
         +"\n4 - Valida Permutacao"
         +"\n5 - Compara Números"
+        +"\n6 - Verifica se Num 'A' possui segmento de Num 'B'"
+        +"\n7 - Valida DATA informada pelo usuario"
         +"\n0 - SAIR")
     entradaMenu = input("\nDigite sua opção de menu aqui >>> ")
 
@@ -265,12 +267,12 @@ while entradaMenu != "0":
             voltaMenu = input("                Digite '1' para retornar ao menu Principal >>> ")
         print("Obrigado pela sua visita a esta funcionalidade")    
 #Ex. 6 - Lista 5 - Confere Ultimos Digitos
-#   Construa uma função encaixa que dados dois inteiros positivos a e b verifica se b corresponde aos
-#   últimos dígitos de a
+#   Usando a função do item anterior, faça um programa que lê dois inteiros positivos a e b everifica
+#   se o menor deles é segmento do outro.
     if entradaMenu =="6":
         print("\n---------------------------------------------------------------------------------------------"
             +"\nEx. 6 - Lista 5 - Confere Ultimos Digitos"
-            +"\nAlgoritmo confirma se os digitos entre Num A e Num B são permutaveis"
+            +"\nFunção verifica se o menor número é segmento de alguma parte do número maior"
             +"\n\n---------------------------------------------------------------------------------------------")
 
         def isEncaixa(nA, nB):
@@ -378,14 +380,44 @@ while entradaMenu != "0":
         print("Obrigado pela sua visita a esta funcionalidade")    
 
 #Ex. 7 - Lista 5 - Confere Ultimos Digitos
-#   Construa uma função encaixa que dados dois inteiros positivos a e b verifica se b corresponde aos
-#   últimos dígitos de a
+#   Escreva uma função em Python que recebe três números inteiros positivos representando uma data(dia, mês e ano),
+#   sua função deverá retornar True se for uma data válida ou False, caso contrário
     if entradaMenu =="7":
         print("\n---------------------------------------------------------------------------------------------"
-            +"\nEx. 7 - Lista 5 - Confere Ultimos Digitos"
-            +"\nAlgoritmo confirma se os digitos entre Num A e Num B são permutaveis"
+            +"\nEx. 7 - Lista 5 - Valida DATA"
+            +"\nFunção que verifica se a DATA informada pelo usuario eh valida, verificando anos bisextos"
             +"\n\n---------------------------------------------------------------------------------------------")
 
+        def isDataCorreta(dia, mes, ano):
+            dataValida = True
+            isBisexto = False
+            validaAno1 = (ano%4)
+            validaAno2 = (ano%100)
+            validaAno3 = (ano%400)
+            if validaAno1 == 0 and validaAno2 != 0 and validaAno3 == 0 or validaAno2 == 0 and validaAno3 == 0:
+                isBisexto = True
+            if dia < 1 or dia > 30 and mes == 4 or mes == 6 or mes == 9 or mes == 11 or ano < 0:
+                dataValida = False
+            elif dia < 1 or dia > 31 and mes == 1 or mes == 3 or mes == 5 or mes == 7 or mes == 8 or mes == 10 or mes == 12 or ano < 0:
+                dataValida = False
+            elif dia < 1 or dia > 28 and mes == 2 and isBisexto == False:
+                dataValida = False
+            elif dia < 1 or dia > 29 and mes == 2 and isBisexto == True:
+                dataValida = False
+            return dataValida
+
+        dia = int(input("\n Informe um dia qualquer (dd) >>> "))
+        mes = int(input(" Informe um mês qualquer (mm) >>> "))
+        ano = int(input(" Informe um ano (aaaa) >>> "))   
+        if isDataCorreta(dia, mes, ano) == True:
+            print("\n\nA data informada >>> {:0>2}" .format(dia), "/ {:0>2}" .format(mes), "/", ano, "<<< é VALIDA")
+        else:
+            print("\n\nA data informada nao eh valida")
+
+        voltaMenu = input("\n\n\nDigite '1' para retornar ao menu Principal >>> ")
+        while voltaMenu != '1':
+            print("::::::::::::::::::::::::::::::::::::ATENÇÃO::::::::::::::::::::::::::::::::::::")
+            voltaMenu = input("                Digite '1' para retornar ao menu Principal >>> ")
     else:
         print("\n---------------------------------------------------------------------------------------------"
         +"\n       ::::::::::::::::::::::::::::::::::::ATENÇÃO::::::::::::::::::::::::::::::::::::"
